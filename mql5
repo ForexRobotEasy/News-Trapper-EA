@@ -1,0 +1,84 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                         News Trapper EA         |
+//|                                https://www.forexroboteasy.com    |
+//|                                                Forex Robot Easy Team|
+//+------------------------------------------------------------------+
+
+// Define input parameters
+input int NewsDetectionSensitivity = 5; // Sensitivity of news event detection
+input double StopLoss = 50.0; // Stop-loss level
+input double TakeProfit = 100.0; // Take-profit level
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Add initialization logic here
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert start function                                            |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Check for high impact news events
+    if (IsHighImpactNewsEventDetected(NewsDetectionSensitivity))
+    {
+        // Execute trading strategy based on the detected news event
+        ExecuteTradingStrategy();
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Check for high impact news events                                |
+//+------------------------------------------------------------------+
+bool IsHighImpactNewsEventDetected(int sensitivity)
+{
+    // Implement logic to detect high impact news events
+    // based on the specified sensitivity
+    
+    // Return true if a high impact news event is detected
+    // Return false otherwise
+    return false;
+}
+
+//+------------------------------------------------------------------+
+//| Execute trading strategy based on the detected news event        |
+//+------------------------------------------------------------------+
+void ExecuteTradingStrategy()
+{
+    // Implement trading strategy based on the detected news event
+    
+    // Set stop-loss and take-profit levels
+    SetStopLossAndTakeProfit(StopLoss, TakeProfit);
+    
+    // Open a trade position
+    OpenTradePosition();
+}
+
+//+------------------------------------------------------------------+
+//| Set stop-loss and take-profit levels                             |
+//+------------------------------------------------------------------+
+void SetStopLossAndTakeProfit(double stopLoss, double takeProfit)
+{
+    // Set stop-loss and take-profit levels for the current trade
+}
+
+//+------------------------------------------------------------------+
+//| Open a trade position                                             |
+//+------------------------------------------------------------------+
+void OpenTradePosition()
+{
+    // Place an order to open a trade position
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Add deinitialization logic here
+}
